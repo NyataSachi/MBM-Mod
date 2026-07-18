@@ -74,7 +74,8 @@
   <ItemGroup>
     <Compile Include="Cheesy.cs" />
     <Compile Include="ConfigWindow.cs" />
-    <Compile Include="CustomTrait.cs" />
+    <Compile Include="Traits\CustomTrait.cs" />
+    <Compile Include="Traits\CustomTraitManager.cs" />
     <Compile Include="EPage.cs" />
     <Compile Include="PayPatch.cs" />
     <Compile Include="Global.cs" />
@@ -83,6 +84,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Patch_Unit_Sell.cs" />
     <Compile Include="Test.cs" />
+    <Compile Include="Traits\GameTraitManager.cs" />
     <Compile Include="Utils.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -2,6 +2,7 @@
 using UnityEngine;
 using System.Reflection;
 using System;
+using MBM_Mod.Traits;
 
 namespace MBM_Mod
 {
@@ -815,17 +816,17 @@ namespace MBM_Mod
             if (GUI.Button(
                 new Rect(105, 40, 100, 20), "Add/Upgrade"))
             {
-                Utils.AddUpgradeTrait(traitID);
+                GameTraitManager.AddUpgradeTrait(traitID);
             }
             if(GUI.Button(
                 new Rect(210, 40, 60, 20), "Decrease"))
             {
-                Utils.RemoveDecreaseTrait(false, traitID);
+                GameTraitManager.RemoveDecreaseTrait(false, traitID);
             }
             if (GUI.Button(
                 new Rect(315, 40, 60, 20), "Remove"))
             {
-                Utils.RemoveDecreaseTrait(true, traitID);
+                GameTraitManager.RemoveDecreaseTrait(true, traitID);
             }
             GUI.DragWindow();
         }
