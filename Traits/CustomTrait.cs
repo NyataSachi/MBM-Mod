@@ -1,15 +1,24 @@
-﻿using System;
+﻿using MBMScripts;
+using System;
 
 
 namespace MBM_Mod
 {
     public class CustomTrait
     {
-        public string Id;
+        public int Id;
+
         public string Name;
+
         public string Tooltip;
 
-        public float Value;
         public bool IsPositive;
+
+        public bool IsMonsterTrait;
+        
+        public bool IsSlaveTrait;
+
+        public int Price;
+
     }
 }

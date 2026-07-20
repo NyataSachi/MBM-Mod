@@ -56,6 +56,10 @@ namespace MBM_Mod
             }
 
             SelectedUnit = GameManager.Instance.PlayerData.SelectedUnit;
+            if (SelectedUnit == null)
+            {
+                SelectedUnit = new Unit(10000);
+            }
 
             if (CurrentPage < 1)
             {

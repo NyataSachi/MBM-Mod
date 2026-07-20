@@ -5,7 +5,7 @@ using MBM_Mod;
 using MBMScripts;
 using UnityEngine;
 
-[BepInPlugin("altsac.mbmmod", "MBM Cheesy cheats", "1.0")]
+[BepInPlugin("altsac.mbmmod", "MBM Cheesy cheats", "1.2")]
 public class Cheesy : BaseUnityPlugin
 {
     public static ConfigEntry<bool> ToggleSellBonus;
@@ -80,5 +80,6 @@ public class Cheesy : BaseUnityPlugin
         ConfigWindow.OnGUI();
         Popup.OnGUI();
     }
+
     
 }

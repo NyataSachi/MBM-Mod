@@ -74,6 +74,9 @@
   <ItemGroup>
     <Compile Include="Cheesy.cs" />
     <Compile Include="ConfigWindow.cs" />
+    <Compile Include="Patch_GameManager_Initialize.cs" />
+    <Compile Include="Patch_InitTrait.cs" />
+    <Compile Include="Patch_SeqLocalization_Load.cs" />
     <Compile Include="Traits\CustomTrait.cs" />
     <Compile Include="Traits\CustomTraitManager.cs" />
     <Compile Include="EPage.cs" />
@@ -84,7 +87,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Patch_Unit_Sell.cs" />
     <Compile Include="Test.cs" />
+    <Compile Include="Traits\CustomTraitRegistry.cs" />
     <Compile Include="Traits\GameTraitManager.cs" />
+    <Compile Include="Traits\LocalizationInjector.cs" />
+    <Compile Include="Traits\Patch_MentalityPercent.cs" />
+    <Compile Include="Traits\Patch_StatePlate.cs" />
+    <Compile Include="Traits\TraitInjector.cs" />
     <Compile Include="Utils.cs" />
   </ItemGroup>
   <ItemGroup>

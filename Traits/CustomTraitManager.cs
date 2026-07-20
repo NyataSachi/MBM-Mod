@@ -9,47 +9,35 @@ namespace MBM_Mod
 {
     public static class CustomTraitManager
     {
-        private static readonly Dictionary<Character,
-            List<CustomTrait>> traits =
-                new Dictionary<Character, List<CustomTrait>>();
+        private static readonly Dictionary<Character, List<CustomTrait>> traits
+            = new Dictionary<Character, List<CustomTrait>>();
 
-        public static List<CustomTrait> Get(Character c)
+        public static void AddTrait(Character character, int id, float value = 0f)
         {
-            if (!traits.TryGetValue(c, out var list))
-            {
-                list = new List<CustomTrait>();
-                traits[c] = list;
-            }
-
-            return list;
-        }
-        public static void AddTrait(Character c,
-                            string id,
-                            string name)
-        {
-            var list = Get(c);
+            var list = Get(character);
 
             if (list.Any(x => x.Id == id))
                 return;
 
-            list.Add(new CustomTrait()
+            list.Add(new CustomTrait
             {
                 Id = id,
-                Name = name,
-                Value = 0
             });
         }
-        public static bool HasTrait(Character c,
-                            string id)
-        {
-            return Get(c).Any(x => x.Id == id);
-        }
-        public static float GetValue(Character c,
-                             string id)
-        {
-            var t = Get(c).FirstOrDefault(x => x.Id == id);
 
-            return t?.Value ?? 0;
+        public static List<CustomTrait> Get(Character character)
+        {
+            if (!traits.TryGetValue(character, out var list))
+            {
+                list = new List<CustomTrait>();
+                traits[character] = list;
+            }
+
+            return list;
         }
+
+        public static bool HasTrait(Character character, int id)
+            => Get(character).Any(x => x.Id == id);
+
     }
 }
